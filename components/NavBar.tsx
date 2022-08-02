@@ -1,4 +1,4 @@
-import ActiveLink from "./ActiveLink"
+import {ActiveLink} from "./ActiveLink"
 import styles from './Navbar.module.css'
 
 const menuItems = [
@@ -24,9 +24,9 @@ const NavBar = () => {
   return (
     <nav className={styles['menu-container']}>
 
-      {menuItems.map(({href, text}) => 
+      {menuItems.map(({href, text}, index) => 
         (
-          <ActiveLink key={href} href={href} text={text}/>
+          <ActiveLink key={index} href={href} text={text}/>
         ))}
     </nav>
   )
